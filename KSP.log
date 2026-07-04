@@ -1,0 +1,77 @@
+[LOG 22:06:19.214] [INFO] ContractConfigurator.ContractConfigurator: Loading CONTRACT_GROUP: 'CNSA_HistoricalMissions'
+[WRN 22:06:19.402] ContractConfigurator.ContractGroup: CONTRACT_GROUP 'CNSA_HistoricalMissions': Using the sortKey field is only applicable on child CONTRACT_GROUP elements
+[LOG 22:06:35.581] [INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'CNSA_DFH1_Launch'
+[WRN 22:06:35.618] ContractConfigurator.ContractType: CONTRACT_TYPE 'CNSA_DFH1_Launch': The weight attribute is deprecated as of Contract Configurator 1.15.0.  Contracts are no longer generated using a weighted system.
+[ERR 22:06:35.672] ContractConfigurator.ContractType: CONTRACT_TYPE 'CNSA_DFH1_Launch': Error parsing maxExpiry
+
+[EXC 22:06:35.696] DataStoreCastException: Cannot cast from ContractConfigurator.Duration to System.Single.
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ConvertType[U] (T value) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.DurationParser.ConvertType[U] (ContractConfigurator.Duration value) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatement[TResult] (T lval) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatementInner[TResult] () (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <9577ac7a62ef43179789031239ba8798>:0)
+	Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+	System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <9577ac7a62ef43179789031239ba8798>:0)
+	System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <9577ac7a62ef43179789031239ba8798>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatement[TResult] () (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	Rethrow as DataStoreCastException: Cannot cast from ContractConfigurator.Duration to System.Single.
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatement[TResult] () (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseExpression (System.String key, System.String expression, ContractConfigurator.ExpressionParser.DataNode dataNode) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	Rethrow as Exception: Error parsing statement.
+	Error occurred near '*':
+	Duration(@/targetDateSeconds - UniversalTime())
+	...............................................* <-- HERE
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseExpression (System.String key, System.String expression, ContractConfigurator.ExpressionParser.DataNode dataNode) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ConfigNodeUtil.ParseSingleValue[T] (System.String key, System.String stringValue, System.Boolean allowExpression) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ConfigNodeUtil.ParseValue[T] (ConfigNode configNode, System.String key, System.Boolean allowExpression) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ConfigNodeUtil.ParseValue[T] (ConfigNode configNode, System.String key, System.Action`1[T] setter, ContractConfigurator.IContractConfiguratorFactory obj, T defaultValue, System.Func`2[T,TResult] validation) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	UnityEngine.DebugLogHandler:LogException(Exception, Object)
+	ModuleManager.UnityLogHandle.InterceptLogHandler:LogException(Exception, Object)
+	UnityEngine.Debug:LogException(Exception)
+	ContractConfigurator.LoggingUtil:LogException(Exception)
+	ContractConfigurator.ConfigNodeUtil:ParseValue(ConfigNode, String, Action`1, IContractConfiguratorFactory, Single, Func`2)
+	ContractConfigurator.ConfigNodeUtil:ParseValue(ConfigNode, String, Action`1, IContractConfiguratorFactory, Func`2)
+	ContractConfigurator.DeferredLoadUtil:ExecuteLoad(DeferredLoadObject`1)
+	System.Reflection.MethodBase:Invoke(Object, Object[])
+	ContractConfigurator.ConfigNodeUtil:ExecuteDeferredLoads()
+	ContractConfigurator.ContractType:Load(ConfigNode)
+	ContractConfigurator.<LoadContractTypeConfig>d__32:MoveNext()
+	ContractConfigurator.<FinalizeContractTypeLoad>d__31:MoveNext()
+	UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+[ERR 22:06:35.698] ContractConfigurator.ContractType: CONTRACT_TYPE 'CNSA_DFH1_Launch': Error parsing deadline
+
+[EXC 22:06:35.700] DataStoreCastException: Cannot cast from ContractConfigurator.Duration to System.Single.
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ConvertType[U] (T value) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.DurationParser.ConvertType[U] (ContractConfigurator.Duration value) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatement[TResult] (T lval) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatementInner[TResult] () (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <9577ac7a62ef43179789031239ba8798>:0)
+	Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+	System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <9577ac7a62ef43179789031239ba8798>:0)
+	System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <9577ac7a62ef43179789031239ba8798>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatement[TResult] () (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	Rethrow as DataStoreCastException: Cannot cast from ContractConfigurator.Duration to System.Single.
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseStatement[TResult] () (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseExpression (System.String key, System.String expression, ContractConfigurator.ExpressionParser.DataNode dataNode) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	Rethrow as Exception: Error parsing statement.
+	Error occurred near '*':
+	Duration(@/targetDateSeconds - UniversalTime())
+	...............................................* <-- HERE
+	ContractConfigurator.ExpressionParser.ExpressionParser`1[T].ParseExpression (System.String key, System.String expression, ContractConfigurator.ExpressionParser.DataNode dataNode) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ConfigNodeUtil.ParseSingleValue[T] (System.String key, System.String stringValue, System.Boolean allowExpression) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ConfigNodeUtil.ParseValue[T] (ConfigNode configNode, System.String key, System.Boolean allowExpression) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	ContractConfigurator.ConfigNodeUtil.ParseValue[T] (ConfigNode configNode, System.String key, System.Action`1[T] setter, ContractConfigurator.IContractConfiguratorFactory obj, T defaultValue, System.Func`2[T,TResult] validation) (at <6718c2905a6c4d3da1b9980d34f563cf>:0)
+	UnityEngine.DebugLogHandler:LogException(Exception, Object)
+	ModuleManager.UnityLogHandle.InterceptLogHandler:LogException(Exception, Object)
+	UnityEngine.Debug:LogException(Exception)
+	ContractConfigurator.LoggingUtil:LogException(Exception)
+	ContractConfigurator.ConfigNodeUtil:ParseValue(ConfigNode, String, Action`1, IContractConfiguratorFactory, Single, Func`2)
+	ContractConfigurator.ConfigNodeUtil:ParseValue(ConfigNode, String, Action`1, IContractConfiguratorFactory, Func`2)
+	ContractConfigurator.DeferredLoadUtil:ExecuteLoad(DeferredLoadObject`1)
+	System.Reflection.MethodBase:Invoke(Object, Object[])
+	ContractConfigurator.ConfigNodeUtil:ExecuteDeferredLoads()
+	ContractConfigurator.ContractType:Load(ConfigNode)
+	ContractConfigurator.<LoadContractTypeConfig>d__32:MoveNext()
+	ContractConfigurator.<FinalizeContractTypeLoad>d__31:MoveNext()
+	UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+[WRN 22:06:35.701] ContractConfigurator.ContractType: Errors encountered while trying to load CONTRACT_TYPE 'CNSA_DFH1_Launch'
